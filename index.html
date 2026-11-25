@@ -1,0 +1,100 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <title>Campus Cycle: Saturday clinic</title>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <p class="brand">Campus Cycle</p>
+    <nav aria-label="Page sections">
+      <a href="#what">What we do</a>
+      <a href="#prices">Prices</a>
+      <a href="#book">Book</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Saturday repair clinic</h1>
+      <p>Bring your bicycle. Leave with it working. Beginners welcome.</p>
+      <p class="event-details">Saturday, 15:00 to 17:00 · Workshop B, Student Centre</p>
+      <a class="button" href="#book">Book a slot</a>
+    </section>
+
+    <section id="what">
+      <h2>What we do</h2>
+      <img src="images/bicycle.png" alt="Line drawing of a bicycle">
+      <ul class="checks">
+        <li>Brakes and cables</li>
+        <li>Tyres and wheels</li>
+        <li>Chain and gears</li>
+      </ul>
+      <button type="button" id="tips-button">Show what to bring</button>
+      <p id="tips" role="status"></p>
+    </section>
+
+    <section id="prices">
+      <h2>Prices</h2>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Check</h3>
+          <p>EUR 10</p>
+        </article>
+        <article class="card">
+          <h3>Each small repair</h3>
+          <p>EUR 5</p>
+        </article>
+        <article class="card">
+          <h3>Full service</h3>
+          <p>EUR 45</p>
+        </article>
+      </div>
+
+      <h3>Estimate your price</h3>
+
+      <label for="service">Service</label>
+      <select id="service">
+        <option value="10">A check</option>
+        <option value="45">A full service</option>
+      </select>
+
+      <label for="repairs">Number of small repairs</label>
+      <input id="repairs" type="number" min="0" step="1" value="0">
+
+      <p>Your estimate: <output id="total">EUR 10</output></p>
+    </section>
+
+    <section id="book">
+      <h2>Book a slot</h2>
+      <form novalidate>
+        <label for="slot">Time slot</label>
+        <select id="slot" name="slot" required>
+          <option>15:00</option>
+          <option>15:30</option>
+          <option>16:00</option>
+          <option>16:30</option>
+        </select>
+
+        <label for="name">Your name</label>
+        <input id="name" type="text">
+
+        <label for="email">Your email address</label>
+        <input id="email" type="email">
+
+        <button type="submit">Book</button>
+      </form>
+      <p id="message" role="status"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Campus Cycle · Personal code: BW-FTY3</p>
+  </footer>
+</body>
+</html>
